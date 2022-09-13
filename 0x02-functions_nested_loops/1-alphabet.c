@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <main.h>
 
 /**
  * print_alphabet: This prints the alhpabets
