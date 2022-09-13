@@ -5,7 +5,7 @@
 /**
  * print_alphabet: This prints the alhpabets
  *
- * Description: Programm to print alphabets using putchar
+ * Description: Programm to print alphabets using putchar function
  *
  * Return: Always 0 (Success)
  */
@@ -22,12 +22,3 @@
 
 }
 
-	int main(void)
-{
-	{
-		print_alphabet();
-		return (0);
-	}
-
-	return (0);
-}
