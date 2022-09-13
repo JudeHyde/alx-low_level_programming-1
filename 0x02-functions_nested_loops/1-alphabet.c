@@ -18,7 +18,7 @@
 	{
 		putchar(i);
 		i++;
-	} return (0);
+	} return (void);
 
 }
 
