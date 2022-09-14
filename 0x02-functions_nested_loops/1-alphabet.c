@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * print_alphabet: This prints the alhpabets
+ * print_alphabet - This prints the alhpabets
  *
  * Description: Programm to print alphabets using putchar function
  *
@@ -17,7 +17,9 @@
 	{
 		putchar(i);
 		i++;
-	} return (0);
+	} 
+	putchar(10)
+	return (0);
 
 }
 
