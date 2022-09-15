@@ -4,7 +4,7 @@
 /**
  * print_to_98 - Prints numbers under 98
  *
- * @n1: integer 1
+ * @n: integer
  *
  * Description: Prints all numbers under 98
  *
@@ -17,14 +17,11 @@ void print_to_98(int n)
 	{
 		printf("%d, ", n);
 		n++;
-	} 
+	}
 	else if (n > 98)
 	{
-		while (n > 98)
-		{
-			printf("%d, ", n);
-			n--;
-		}
+		printf("%d, ", n);
+		n--;
 	}
 	printf("98\n");
 }
