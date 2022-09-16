@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- *print_diagonal - check the code for Holberton School students.
+ * print_diagonal - prints Diagonal.
  * @n: Number of spaces wanted
  *
  * Return: Always 0.
+ *
  */
 
 void print_diagonal(int n)
@@ -22,6 +23,6 @@ void print_diagonal(int n)
 
 			_putchar('\\');
 			_putchar('\n');
+		}
 	}
-
 }
