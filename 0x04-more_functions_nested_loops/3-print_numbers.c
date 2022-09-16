@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_numbers - check the code for Holberton School students.
- * 
+ * print_numbers - check the code for alx functions
+ *
  * Return: Always 0.
  */
 
