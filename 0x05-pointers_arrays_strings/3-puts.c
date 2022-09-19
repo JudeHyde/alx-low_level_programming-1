@@ -1,5 +1,6 @@
 #include "main.h"
-#include "2-strlen.c"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _puts - Puts characters
@@ -11,8 +12,10 @@
 
 void _puts(char *str)
 {
-	while (*str)
-		_putchar(*str++);
-
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
 	_putchar('\n');
 }
