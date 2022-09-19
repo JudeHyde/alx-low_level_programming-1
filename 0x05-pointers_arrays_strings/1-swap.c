@@ -8,9 +8,9 @@
  * Return: void
  */
 
-void swap_int(int *a, int *b);
+void swap_int(int *a, int *b)
 {
-	int  firstswap = *a;
+	int firstswap = *a;
 	int secondswap = *b;
 	*a = secondswap;
 	*b = firstswap;
