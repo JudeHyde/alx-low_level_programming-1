@@ -1,5 +1,6 @@
  /**
- *_strcat - concatenates two strings
+ * _strcat - concatenates two strings
+ * Description: The function concatenates two strings
  * @dest: destination char
  * @src: source char
  * Return: new char
