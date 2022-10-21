@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void _attribute_((constructor)) primary(void);
+void __attribute__((constructor)) primary(void);
 
 /**
  * primary - print before the main function
