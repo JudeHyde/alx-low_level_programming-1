@@ -1,28 +1,28 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_diagonal - prints Diagonal.
- * @n: Number of spaces wanted
- *
- * Return: Always 0.
- *
+ * print_diagonal - diagonal lines made of backslashes
+ * @n: number of \ to be printed
+ * Return: void
  */
 
 void print_diagonal(int n)
 {
-	int i, j;
+	int i = 0, ii;
 
-	if (n <= 0)
-		_putchar('\n');
-	else
+	while (i < n && n > 0)
 	{
-		for (i = 0; i < n; i++)
+		ii = 0;
+		while (ii < i)
 		{
-			for (j = 0; j < i; j++)
-				_putchar(' ');
-
-			_putchar('\\');
-			_putchar('\n');
+			_putchar(' ');
+			ii++;
 		}
+
+		_putchar('\\');
+		_putchar('\n');
+		i++;
 	}
+	if (i == 0)
+		_putchar('\n');
 }

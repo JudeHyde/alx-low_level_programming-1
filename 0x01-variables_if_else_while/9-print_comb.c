@@ -1,29 +1,25 @@
 #include <stdio.h>
-
-
+#include <unistd.h>
 /**
- * main - Programe to print numbers
- *
- * Description: program will print numbers
- *
- *  Return: Always 0 (Success)
+ * main - Entry point
+ * Description: prints numbers
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i = 48;
+	int i;
 
-	while (i < 58)
+	for (i = '0'; i <= '9' ; i++)
 	{
 		putchar(i);
-		if (i != 57)
-		{
-			putchar(44);
-			putchar(32);
-		}
-		i++;
-	}
-	putchar(10);
 
+		if (i != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+
+	putchar('\n');
 	return (0);
 }

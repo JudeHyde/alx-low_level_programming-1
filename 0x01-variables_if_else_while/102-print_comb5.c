@@ -1,42 +1,44 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 /**
- *main-ASCII with cent, dec and units
- *Return: 0
+ * main - Entry point
+ * Description: prints all possible combination of 2-digit numbers
+ * Return: Always 0 (success)
  */
+int main(void)
+{
+	int c, i, k, j;
 
-int
-main(void)
-{
-int dec1;
-int unit1;
-int dec2;
-int unit2;
-for (dec1 = 48; dec1 <= 57; dec1++)
-{
-	for (unit1 = 48; unit1 <= 57; unit1++)
+	for (c = 48; c <= 57; c++)
 	{
-		for (dec2 = 48; dec2 <= 57; dec2++)
+		for (i = 48; i <= 57; i++)
 		{
-			for (unit2 = 48; unit2 <= 57; unit2++)
+			for (k = 48; k <= 57; k++)
 			{
-				if (unit1 < unit2 && dec1 <= dec2)
+				for (j = 48; j <= 57; j++)
 				{
-					putchar (dec1);
-					putchar (unit1);
-					putchar (' ');
-					putchar (dec2);
-					putchar (unit2);
-					if (!(dec1 == 57 && unit1 == 56 && dec2 == 57 && unit2 == 57))
+				if (((k + j) > (c + i) &&  k >= c) || c < k)
+				{
+					putchar(c);
+					putchar(i);
+					putchar(' ');
+					putchar(k);
+					putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
 					{
-						putchar (',');
-						putchar (' ');
+					break;
 					}
+					else
+					{
+					putchar(',');
+					putchar(' ');
+					}
+				}
 				}
 			}
 		}
 	}
-}
-putchar ('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }

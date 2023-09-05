@@ -1,1 +1,1 @@
-Help ME i dont understand
+**0x10. C - Variadic functions**

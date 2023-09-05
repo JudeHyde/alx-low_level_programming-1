@@ -1,60 +1,63 @@
-#include "main.h"
+#include "holberton.h"
+
+int find_strlen(char *s);
+int check_palindrome(char *s, int len, int index);
+int is_palindrome(char *s);
 
 /**
- * length - returns length of string
- * @s: string
- * Return: integer length
+ * find_strlen - Returns the length of a string.
+ * @s: The string to be measured.
+ *
+ * Return: The length of the string.
  */
-
-int length(char *s)
+int find_strlen(char *s)
 {
+	int len = 0;
 
-	if (*s != '\0')
+	if (*(s + len))
 	{
-		return (1 + length(s + 1));
+		len++;
+		len += find_strlen(s + len);
 	}
-	else
-	{
-		return (0);
-	}
+
+	return (len);
 }
 
 /**
- * compare - compare characters
- * @s: string
- * @beg: beginning index
- * @end: end index
- * Return: integer indicating non-match 0, match 1
+ * check_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ * @len: The length of s.
+ * @index: The index of the string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
  */
-
-int compare(char *s, int beg, int end)
+int check_palindrome(char *s, int len, int index)
 {
-	if (s[beg] != s[end])
-		return (0);
-	else if (beg == end && s[beg] == s[end])
+	if (s[index] == s[len / 2])
 		return (1);
-	else if (beg == end - 1 && s[beg] == s[end])
-		return (1);
-	else
-		return (compare(s, beg + 1, end - 1));
+
+	if (s[index] == s[len - index - 1])
+		return (check_palindrome(s, len, index + 1));
+
+	return (0);
 }
 
 /**
- * is_palindrome - checks is string is a palindrome
- * @s: string
- * Return: integer, 1 if palindrom, 0 if not
+ * is_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
  */
-
 int is_palindrome(char *s)
 {
-	int len, beg, end;
+	int index = 0;
+	int len = find_strlen(s);
 
-	len = length(s);
-	beg = 0;
-	end = len - 1;
-
-	if (len == 0 || len == 1)
+	if (!(*s))
 		return (1);
-	else
-		return (compare(s, beg, end));
+
+	return (check_palindrome(s, len, index));
 }
+

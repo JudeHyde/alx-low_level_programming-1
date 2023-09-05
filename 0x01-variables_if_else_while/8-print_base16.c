@@ -1,26 +1,24 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - print hexadecimals
- *
- *  Description: program will use putchar to print alphabet
- *
- *  Return: Always 0 (Success)
+ * main - Entry point
+ * Description: Print base 16 numbers
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i = 0;
+	char c;
+	char d = '0';
 
-	while (i < 48)
+	while (d <= '9')
 	{
-		if (i < 10)
-			putchar(i + '0');
-		else if (i > 41)
-			putchar(i - 10 + 'A');
-		i++;
+		putchar(d);
+		d++;
 	}
-	putchar(10);
-
+	for (c = 'a'; c <= 'f'; c++)
+	{
+		putchar(c);
+	}
+	putchar('\n');
 	return (0);
 }

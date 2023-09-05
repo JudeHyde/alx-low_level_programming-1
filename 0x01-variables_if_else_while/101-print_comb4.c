@@ -1,38 +1,35 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- *main-ASCII with cent, dec and units
- *Return: 0
+ * main - Prints 3 combination of numbers
+ *
+ * Return: Always (Success)
  */
-
-int
-main(void)
+int main(void)
 {
-int cent;
-int dec;
-int unit;
+	int c, i, k;
 
-for (cent = 48; cent <= 57; cent++)
-{
-	for (dec = 48; dec <= 57; dec++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		for (unit = 48; unit <= 57; unit++)
+		for (i = '0'; i <= '9'; i++)
 		{
-			if (cent < dec && dec < unit)
+			for (k = '0'; k <= '9'; k++)
 			{
-				putchar (cent);
-				putchar (dec);
-				putchar (unit);
-				if (!(cent == 55 && dec == 56 && unit == 57))
+				if (c < i && i < k)
 				{
-					putchar (',');
-					putchar (' ');
+					putchar(c);
+					putchar(i);
+					putchar(k);
+
+					if (c != '7')
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
 	}
-}
-
-putchar ('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }

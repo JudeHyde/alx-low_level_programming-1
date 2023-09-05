@@ -1,33 +1,22 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - Using putchar
- *
- *  Description: program will use putchar to print alphabets
- *
- *  Return: Always 0 (Success)
+ * main - Entry point
+ * Description: prints alphabet in lowercase then uppercase
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i, j;
+	int ch;
 
-
-	i = 97;
-	j = 65;
-
-	while (i < 123)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(i);
-		i++;
+		putchar(ch);
 	}
-
-	while (j < 91)
+	for (ch = 'A'; ch <= 'Z'; ch++)
 	{
-		putchar(j);
-		j++;
+		putchar(ch);
 	}
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }

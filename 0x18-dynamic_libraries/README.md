@@ -1,2 +1,2 @@
-# Dynamic Libraries
-* holberton.h, libholberton.so: dynamic library libholberton.so containing all the functions listed
+# 0x18-dynamic_libraries
+In this project, I learnt how to create dynamic libraries from modules and use them

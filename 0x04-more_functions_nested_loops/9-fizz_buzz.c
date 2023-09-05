@@ -1,33 +1,40 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - check fizzbuzz code.
+ * main - Fizz Buzz code
  *
- * Description: Code to print fizzbuzz
- *
- * Return: Always 0.
- *
+ * Return: void
  */
 
 int main(void)
 {
-	int num;
+	int i = 1;
 
-	for (num = 1; num < 101; num++)
+	while (i <= 100)
 	{
-		if (num % 15 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
+		{
 			printf("FizzBuzz");
-		else if (num % 3 == 0)
+		}
+		else if (i % 3 == 0)
+		{
 			printf("Fizz");
-		else if (num % 5 == 0)
+		}
+		else if (i % 5 == 0)
+		{
 			printf("Buzz");
+		}
 		else
-			printf("%d", num);
+		{
+			printf("%i", i);
+		}
+		if (i != 100)
+		{
+			putchar(' ');
+		}
 
-		if (num != 100)
-			printf(" ");
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }

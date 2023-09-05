@@ -1,15 +1,14 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * mul - check the code for Multiplication.
- * @a: First integer
- * @b: Second integer
+ * mul - gives the product of a and b
+ * @a: variable
+ * @b: variable
  *
- * Return: Always 0.
+ * Return: a * b
  */
 
 int mul(int a, int b)
 {
-	return (a * b);
+return (a * b);
 }

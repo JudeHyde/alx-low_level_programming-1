@@ -1,29 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
 /**
- * print_alphabet_x10 - This prints the alhpabets
+ * print_alphabet_x10 - Make alphabet x10 times
  *
- * Description: Programm to print alphabets 10 times using putchar function
- *
- * Return: Always 0 (Success)
+ * Return: void
  */
-
-	void print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
-	int rollover = 0;
+	char c;
+	int i = 0;
 
-	while (rollover < 10)
+	while (i <= 9)
 	{
-		int i = 97;
+		for (c = 'a'; c <= 'z'; c++)
+		{
+			_putchar(c);
+		}
 
-		while (i < 123)
-			{
-			putchar(i);
-			i++;
-			}
-		putchar(10);
-		rollover++;
+		_putchar('\n');
+
+		i++;
 	}
 }
-

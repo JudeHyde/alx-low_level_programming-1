@@ -1,13 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
+#include "holberton.h"
+
 /**
- * _abs - This returns absolute
- * @n: Operand for checking
- *
- * Description: Programm to return absolute value of an integer
- *
- * Return: Always 0 (Success)
+ * _abs - Entry point
+ * @n: n is an integer
+ * Description: prints the absolute value of an integer
+ * Return: int
  */
 
 int _abs(int n)
@@ -24,6 +21,4 @@ int _abs(int n)
 	{
 		return (n);
 	}
-	return (0);
 }
-

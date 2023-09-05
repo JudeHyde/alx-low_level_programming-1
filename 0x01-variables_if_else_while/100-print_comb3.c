@@ -1,29 +1,31 @@
 #include <stdio.h>
-
-
+#include <unistd.h>
 /**
- * main - Programe to print numbers
- *
- * Description: program will print numbers
- *
- *  Return: Always 0 (Success)
+ * main - Entyr point
+ * Description: prints two digits combination
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i = 48;
+	int c, i;
 
-	while (i < 58)
+	for (c = '0'; c <= '9'; c++)
 	{
-		putchar(i);
-		if (i != 57)
+		for (i = '0'; i <= '9'; i++)
 		{
-			putchar(44);
-			putchar(32);
-		}
-		i++;
-	}
-	putchar(10);
+			if (c < i)
+			{
+				putchar(c);
+				putchar(i);
 
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
 	return (0);
 }

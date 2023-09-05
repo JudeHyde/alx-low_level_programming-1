@@ -1,23 +1,18 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - determine if number is positive or negative
- *
- *  Description: program will use putchar to print alphabet
- *
- *  Return: Always 0 (Success)
+ * main - Entry point
+ * Description: prints the alphabet in lowercase\n
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i = 97;
+	int ch;
 
-	while (i < 123)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(i);
-		i++;
+		putchar(ch);
 	}
-	putchar(10);
-
-	return (0);
+	putchar('\n');
+return (0);
 }

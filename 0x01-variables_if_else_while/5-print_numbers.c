@@ -1,24 +1,19 @@
 #include <stdio.h>
-
-
+#include <unistd.h>
 /**
- * main - Programe to print numbers
- *
- * Description: program will print numbers
- *
- *  Return: Always 0 (Success)
+ * main -Entry point
+ * Description: prints allsingle digit numbers of
+ * base 10 from 0
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i = 48;
+	int a;
 
-	while (i < 58)
+	for (a = 0; a < 10; a++)
 	{
-		putchar(i);
-		i++;
+		printf("%d", a);
 	}
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }

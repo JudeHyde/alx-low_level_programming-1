@@ -1,1 +1,1 @@
-Reading ME arent you ?
+**0x0E. C - Structures, typedef**

@@ -1,31 +1,43 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
+
+int is_divisible(int num, int div);
+int is_prime_number(int n);
+
 /**
- * prime_finder - finds out if a number is prime recursively
+ * is_divisible - Checks if a number is divisible.
+ * @num: The number to be checked.
+ * @div: The divisor.
  *
- * @x: number to determine if prime
- * @y: number to check if divisor
- *
- * Return: 1 if prime, 0 otherwise
+ * Return: If the number is divisible - 0.
+ *         If the number is not divisible - 1.
  */
-int prime_finder(int x, int y)
+int is_divisible(int num, int div)
 {
-	if (x == y)
-		return (1);
-	if (!(x % y))
+	if (num % div == 0)
 		return (0);
-	return (prime_finder(x, y + 1));
+
+	if (div == num / 2)
+		return (1);
+
+	return (is_divisible(num, div + 1));
 }
+
 /**
- * is_prime_number - returns if a number is prime
+ * is_prime_number - Checks if a number is prime.
+ * @n: The number to be checked.
  *
- * @n: number to determine primeness of
- *
- * Return: 1 if prime, 0 otherwise
+ * Return: If the integer is not prime - 0.
+ *         If the number is prime - 1.
  */
 int is_prime_number(int n)
 {
-	if (n < 2)
+	int div = 2;
+
+	if (n <= 1)
 		return (0);
-	return (prime_finder(n, 2));
+
+	if (n >= 2 && n <= 3)
+		return (1);
+
+	return (is_divisible(n, div));
 }

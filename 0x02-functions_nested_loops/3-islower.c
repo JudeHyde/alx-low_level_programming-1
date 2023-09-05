@@ -1,26 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
+#include "holberton.h"
+
 /**
- * _islower - This checks for case
- * @c: Operand for checking
- *
- * Description: Programm to chack alphabets casing
- *
- * Return: Always 0 (Success)
+ * _islower - Entry point
+ * Description: checks is a character is lowercase
+ * @c: the integer value it receives
+ * Return: 1 if true. 0 if false.
  */
-
-	int _islower(int c)
-
+int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+int i = 'a';
 
+for (i = 'a'; i <= 'z'; i++)
+{
+/* refer int c*/
+if (c == i)
+{
+return (1);
 }
-
+}
+return (0);
+}

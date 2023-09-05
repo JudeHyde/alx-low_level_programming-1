@@ -1,25 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
 /**
- * print_alphabet - This prints the alhpabets
- *
- * Description: Programm to print alphabets using putchar function
- *
- * Return: Always 0 (Success)
+ * print_alphabet - Entry point
+ * Description: a function that prints the alphabet,
+ * in lowecase followed by a new line
+ * Return: void
  */
-
-	int print_alphabet(void)
+void print_alphabet(void)
 {
-	int i = 97;
+	char letter = 'a';
 
-	while (i < 123)
+	while (letter <= 'z')
 	{
-		putchar(i);
-		i++;
+		_putchar(letter);
+		letter++;
 	}
-	putchar(10);
-	return (0);
-
+	_putchar('\n');
 }
-

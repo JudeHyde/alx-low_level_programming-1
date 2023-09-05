@@ -1,27 +1,24 @@
 #include <stdio.h>
-
-
+#include <unistd.h>
 /**
- * main - Programe wont print q and e
- *
- *  Description: program will use putchar to print alphabet
- *
- *  Return: Always 0 (Success)
+ * main - Entry point
+ * Description: prints lowercase alphabets
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int i = 97;
+	int ch;
 
-	while (i < 123)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (i != 101 && i != 113)
+		if (ch != 'e' && ch != 'q')
 		{
-			putchar(i);
+			putchar(ch);
 		}
-		i++;
+		else
+		{
+		}
 	}
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }
